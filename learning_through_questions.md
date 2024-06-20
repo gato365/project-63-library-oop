@@ -2,18 +2,20 @@
 
 ## My Question 1: I want to focus on project 3, how many files will I need in python do this?
 
+
+### 0. Background Information
 Preface: It was long but I shorten it to make it more readable.
 
 
 Creating a comprehensive online shopping system with Object-Oriented Programming (OOP) principles in Python can involve organizing your codebase efficiently across multiple files. The structure and number of files will depend on the complexity and modularity you aim to achieve. For the Online Shopping System project, a well-organized approach could look something like this:
 
-### Suggested File Structure
+### 1. **`main.py`** 
 
 1. **`main.py`** - The entry point of the application that initializes the application and ties together other modules.
 - **`main.py`**: This script would run the main application logic, importing modules, creating objects, and handling the user interactions or command-line arguments if it's a CLI-based application.  
 
 
-
+### 2. **`products.py`** 
 2. **`products.py`** - Contains the classes related to products:
    - `Product` (base class)
    - `Clothing`
@@ -22,7 +24,7 @@ Creating a comprehensive online shopping system with Object-Oriented Programming
    - **`products.py`**: Defines all product-related data structures and possibly some methods for product management like search, update, etc.
 
 
-
+### 3. **`users.py`** 
 3. **`users.py`** - Manages user-related classes:
    - `User` (base class, potentially abstract if not instantiated directly)
    - `Customer`
@@ -30,14 +32,14 @@ Creating a comprehensive online shopping system with Object-Oriented Programming
 - **`users.py`**: Manages user creation, authentication, and attributes. Admin users might have methods to access reports or modify product listings.
 
 
-
+### 4. **`interfaces.py`** 
 4. **`interfaces.py`** - Defines interfaces and abstract classes that enforce certain behaviors across different classes:
    - `Reviewable`
    - `Discountable`
 - **`interfaces.py`**: Establishes common interfaces that multiple classes can implement, ensuring a consistent method signature across disparate objects.
 
 
-
+### 5. **`transactions.py`** 
 5. **`transactions.py`** - Handles all transaction-related functionalities:
    - Classes and functions for managing shopping carts
    - Order processing
@@ -45,17 +47,19 @@ Creating a comprehensive online shopping system with Object-Oriented Programming
 - **`transactions.py`**: Essential for handling purchases, cart management, and possibly integrating with external payment gateways if the scope includes real transactions.
 
 
-
+### 6. **`utilities.py`**  
 6. **`utilities.py`** - Provides utility functions and classes that might be used across the system, such as:
    - Helper functions for formatting, validations
    - Shared enums or constants
 - **`utilities.py`**: A helper file for commonly used functions reduces redundancy and keeps the code clean.
+
+### 7. **`database.py`**
 7. **`database.py`** - Manages data storage and retrieval, acting as a pseudo-database interface if not using a real database:
    - Functions to load and save data
    - Simulated tables for users, products, orders
 - **`database.py`**: Simulates a database interface for handling all data persistence, crucial for storing user data, product information, and transaction records.
 
-### Modularization Benefits
+### 8. Modularization Benefits
 
 This modular approach helps in maintaining separation of concerns—one of the core principles in software engineering. Each module/file has a distinct responsibility, making the system easier to manage, scale, and debug. Additionally, it allows multiple developers to work on different parts of the system simultaneously without much conflict.
 
