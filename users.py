@@ -22,6 +22,12 @@ class User:
             setattr(self, key, value)
         print("Profile updated successfully.")
 
+    ## Define User id attribute
+    
+    def user_id(self):
+        return self._user_id
+    
+
 class Customer(User):
     """
     A class representing a customer in the system. Inherits from User.
