@@ -26,4 +26,3 @@ class Database:
         print("Data loaded successfully")
         pass
 
-## should all the json files be in the main directory or in the same directory as the database class? Ans:  in the same directory as the database class
