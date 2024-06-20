@@ -1,7 +1,6 @@
 # My Questions to ChatGPT to complete this task:
 
-## My Question 1: 
-I want to focus on project 3, how many files will I need in python do this?
+## My Question 1: I want to focus on project 3, how many files will I need in python do this?
 
 Preface: It was long but I shorten it to make it more readable.
 
@@ -63,8 +62,7 @@ This modular approach helps in maintaining separation of concerns—one of the c
 For a real-world application, especially in a collaborative setting, organizing your Python project into these files/modules will facilitate easier maintenance and scalability.
 
 
-## My Question 2:
-Most classes has a base class,... what if there is a feature that I have not thought about before, how do I handle a new class in that situation that could change elements of the base case?
+## My Question 2: Most classes has a base class,... what if there is a feature that I have not thought about before, how do I handle a new class in that situation that could change elements of the base case?
 
 Integrating a new class into an existing class hierarchy, especially when it affects the base class, can be challenging but manageable with thoughtful design and refactoring. Here are strategies to handle such a situation effectively:
 
@@ -106,8 +104,7 @@ Finally, update your project documentation to reflect changes made to the archit
 By using these strategies, you can effectively manage the integration of new features into an existing class hierarchy, ensuring that your application remains robust, scalable, and maintainable.
 
 
-## My Question 3:
-Creating this paradigm was done by ChatGPT, is it worth it to practice making paradigms to strengthen my understanding of OOP?
+## My Question 3: Creating this paradigm was done by ChatGPT, is it worth it to practice making paradigms to strengthen my understanding of OOP?
 
 
 
@@ -146,10 +143,17 @@ The principles underlying most design patterns are applicable across different p
 By regularly practicing with and implementing design patterns, you not only enhance your OOP skills but also prepare yourself for complex software development challenges, making you a more proficient and versatile software engineer.
 
 
-## My Question 4:
-What should be the order of files to be created?
+## My Question 4: What should be the order of files to be created?
+
+
+Side Note: I do not agree with this order, I would create the classes 1st then indiviuadually test them for learning purposes
+
+
 
 For the structured Library Management System with the specified files, the order in which you create the files can significantly impact the ease and efficiency of your development process. Here’s a logical order for creating the files, based on dependencies and foundational requirements:
+
+
+
 
 ### 1. **`database.py`**
 - **Rationale**: Begin with the `database.py` file because it lays the foundation for data storage and retrieval, which are crucial for all other functionalities of the application. By setting up simulated tables and basic data-handling functions first, you ensure that there is a backend ready to support the operations defined in other modules.
@@ -177,8 +181,7 @@ By following this order, each module builds upon the foundations laid by the ear
 
 
 
-## My Question 5:
-What should be the structure of the `database.py` file? Be as detailed as possible.
+## My Question 5: What should be the structure of the `database.py` file? Be as detailed as possible.
 
 
 Side questions:
@@ -246,8 +249,7 @@ For exmaple:
 
 
 
-## My Question 6:
-How do I test the database class?
+## My Question 6: How do I test the database class?
 Ans:
 Testing the `Database` class effectively is crucial to ensure that your data handling is robust, accurate, and reliable. Here’s a comprehensive guide on how to approach testing this class, which includes setting up tests, using appropriate testing frameworks, and defining test cases to cover various functionalities.
 
@@ -351,8 +353,7 @@ Consider setting up Continuous Integration (CI) to run your tests automatically 
 Thoroughly testing your `Database` class ensures that your application's data layer is reliable and functions correctly under various scenarios. Good test coverage for this class is essential as it forms the backbone of your application’s data management.
 
 
-## My Question 7:
-Why when testing the database class, do I need to do the following for each type of data (products, users, orders)?
+## My Question 7: Why when testing the database class, do I need to do the following for each type of data (products, users, orders)?
 ```python
 class TestDatabase(unittest.TestCase):
     def setUp(self):
@@ -387,9 +388,26 @@ These methods help ensure that tests are **accurate and repeatable**. You can ru
 
 - When testing different functionalities such as adding, updating, or deleting records across various data types (products, users, orders), it's crucial to ensure that the initial state allows each test to perform only its intended operations without side effects. For example, a test for deleting a user should not fail because the user was already deleted by a previous test or was never added due to errors in another test.
 
-### Conclusion
+#### Conclusion
 
 In summary, using `setUp` and `tearDown` provides a robust framework for setting up a controlled test environment, ensures that tests do not interfere with each other, and facilitates easy maintenance and scalability of the test code. These practices are especially important in database testing, where the integrity and isolation of data are paramount for accurate test results.
 
-## My Question __:
-What is the general structure of a class in Python? When should I commit for 
+
+## My Question 8: Whats the point of classes in Python?
+Ans:
+
+Classes in Python are fundamental to the object-oriented programming (OOP) paradigm, which is a powerful way to structure and organize code. Here are some key points highlighting the importance and benefits of using classes in Python:
+
+### 1. **Encapsulation**
+
+- **Data Encapsulation**: Classes provide a way to encapsulate data (attributes) and associated behavior (methods) into a single unit. This bundling of data and methods helps in keeping the implementation details hidden and allows for better control over data access and modification.
+  
+### 2. **Code Reusability**
+
+- **Inheritance**: Classes allow for inheritance, where a new class can inherit
+
+
+
+
+
+## My Question __: What is the general structure of a class in Python? When should I commit for 
