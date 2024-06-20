@@ -144,3 +144,42 @@ The principles underlying most design patterns are applicable across different p
 - **Study Open Source**: Look at open-source projects to see how patterns are used in large-scale systems.
 
 By regularly practicing with and implementing design patterns, you not only enhance your OOP skills but also prepare yourself for complex software development challenges, making you a more proficient and versatile software engineer.
+
+
+## My Question 4:
+What should be the order of files to be created?
+
+For the structured Library Management System with the specified files, the order in which you create the files can significantly impact the ease and efficiency of your development process. Here’s a logical order for creating the files, based on dependencies and foundational requirements:
+
+### 1. **`database.py`**
+- **Rationale**: Begin with the `database.py` file because it lays the foundation for data storage and retrieval, which are crucial for all other functionalities of the application. By setting up simulated tables and basic data-handling functions first, you ensure that there is a backend ready to support the operations defined in other modules.
+
+### 2. **`utilities.py`**
+- **Rationale**: This file provides utility functions that will be widely used across the system. Establishing these helpers early on can make the development of other modules smoother and more consistent, particularly for tasks like formatting and validation which are common across different parts of the application.
+
+### 3. **`products.py`**
+- **Rationale**: Define the `Product` class and its subclasses (`Clothing`, `Electronics`, etc.) early because product management is likely central to the functionality of the system. This module will define the core data structures that other parts of the application will interact with, especially in transactions and user interactions.
+
+### 4. **`users.py`**
+- **Rationale**: With products defined, next set up the user management system since users will interact with these products. This includes defining different user types such as `Customer` and `Admin`, which are essential for role-based features in the application.
+
+### 5. **`interfaces.py`**
+- **Rationale**: Now that the basic entities like products and users are established, define interfaces such as `Reviewable` and `Discountable`. These interfaces may need to interact with methods defined in both `products.py` and `users.py`, making it logical to create this after the main classes are established.
+
+### 6. **`transactions.py`**
+- **Rationale**: This file should be created after `products.py` and `users.py` because it will utilize both modules to manage shopping carts, process orders, and handle payments. This module ties together the functionalities provided by products and users in the context of transaction management.
+
+### 7. **`main.py`**
+- **Rationale**: Develop this last as it serves as the entry point of the application, integrating all the previously created modules. `main.py` will orchestrate the interactions between the user, the product catalog, and the transaction system, relying on the functionality and data structures defined in the other modules.
+
+By following this order, each module builds upon the foundations laid by the earlier ones, allowing you to progressively integrate and test features as the development progresses. This approach ensures that by the time you are writing the `main.py`, all necessary components are in place and ready to be tied together in the application's main logic.
+
+
+
+
+## My Question 5:
+What should be the structure of the `database.py` file? Be as detailed as possible.
+
+
+## My Question 7:
+What is the general structure of a class in Python? When should I commit for 
