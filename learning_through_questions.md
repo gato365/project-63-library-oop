@@ -181,5 +181,57 @@ By following this order, each module builds upon the foundations laid by the ear
 What should be the structure of the `database.py` file? Be as detailed as possible.
 
 
+Side questions:
+a. What is serialization?
+Ans: Serialization is the process of converting complex data structures, such as objects or data collections, into a format that can be easily stored, transmitted, or reconstructed later. This process is essential for tasks like saving data to disk, sending data over a network, or storing data in a database. Serialization ensures that data can be represented in a consistent format that can be reconstructed accurately when needed.
+b. what is the difference between JSON and Pickle?
+Ans: JSON (JavaScript Object Notation) and Pickle are two common serialization formats in Python, each with its own characteristics and use cases:
+- **JSON**: JSON is a lightweight, human-readable data interchange format that is easy to understand and widely used for data exchange between systems. It is text-based and can represent simple data structures like lists and dictionaries. JSON is language-independent and supported by many programming languages.
+- **Pickle**: Pickle is a Python-specific serialization format that can handle more complex data structures, including custom objects, functions, and classes. It is binary-based and optimized for Python objects. Pickle is not secure against erroneous or maliciously constructed data, so it is recommended to only unpickle data from trusted sources.
+c. what does encapsulation mean?
+Ans: Encapsulation is one of the core principles of object-oriented programming (OOP) that refers to bundling the data (attributes) and methods (functions) that operate on the data into a single unit called a class. Encapsulation helps in hiding the internal state of an object and restricting direct access to it from outside the class. This concept promotes data abstraction, data hiding, and modularity in software design, enhancing security and maintainability.
+
+d.  ## why use orders rather than transactions? 
+Ans: orders are more specific to the context of the project
+
+
+
+
+
+
+
+
+
+
+
+e. what is __init__ important? WHat does it do?
+Ans: The `__init__` method in Python is a special method that is automatically called when a new instance of a class is created. It is also known as the constructor method. The primary purpose of the `__init__` method is to initialize the attributes of an object when it is created. By defining the `__init__` method within a class, you can specify how the object should be initialized and set up its initial state. This method allows you to pass arguments to the class when creating an instance and perform any necessary setup operations. The `__init__` method is a fundamental part of Python classes and plays a crucial role in object initialization and attribute assignment.
+
+
+f.  should all the json files be in the main directory or in the same directory as the database class? 
+Ans:  in the same directory as the database class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## My Question 7:
 What is the general structure of a class in Python? When should I commit for 
