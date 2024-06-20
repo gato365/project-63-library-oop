@@ -351,6 +351,20 @@ Consider setting up Continuous Integration (CI) to run your tests automatically 
 Thoroughly testing your `Database` class ensures that your application's data layer is reliable and functions correctly under various scenarios. Good test coverage for this class is essential as it forms the backbone of your application’s data management.
 
 
-
 ## My Question 7:
+Why when testing the database class, do I need to do the following for each type of data (products, users, orders)?
+```python
+class TestDatabase(unittest.TestCase):
+    def setUp(self):
+        """Set up a fresh database before each test."""
+        self.db = Database()
+        self.db.load_data()  # Assuming load_data() can load mock data for testing
+
+    def tearDown(self):
+        """Clean up after each test."""
+        self.db = None
+```
+
+
+## My Question __:
 What is the general structure of a class in Python? When should I commit for 
