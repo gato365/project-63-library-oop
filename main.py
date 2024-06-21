@@ -9,10 +9,10 @@ db.load_data()
 
 
 # Adding users
-admin = Admin(user_id=1, username="admin1", email="admin@example.com")
-customer = Customer(user_id=2, username="customer1", email="customer@example.com")
-db.add_user(admin)
-db.add_user(customer)
+# admin = Admin(user_id=1, username="admin1", email="admin@example.com")
+# customer = Customer(user_id=2, username="customer1", email="customer@example.com")
+# db.add_user(admin)
+# db.add_user(customer)
 
 # # Adding products
 # laptop = Electronics(product_id=101, name="Laptop", brand="Dell")

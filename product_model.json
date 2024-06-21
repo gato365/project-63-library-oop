@@ -1,0 +1,72 @@
+{
+  "products": [
+    {
+      "type": "Product",
+      "product_id": 101,
+      "name": "Desk Lamp"
+    },
+    {
+      "type": "Product",
+      "product_id": 102,
+      "name": "Office Chair"
+    },
+    {
+      "type": "Product",
+      "product_id": 103,
+      "name": "Wall Clock"
+    },
+    {
+      "type": "Product",
+      "product_id": 104,
+      "name": "Bookshelf"
+    },
+    {
+      "type": "Clothing",
+      "product_id": 201,
+      "name": "T-shirt",
+      "size": "Medium"
+    },
+    {
+      "type": "Clothing",
+      "product_id": 202,
+      "name": "Jeans",
+      "size": "32"
+    },
+    {
+      "type": "Clothing",
+      "product_id": 203,
+      "name": "Jacket",
+      "size": "Large"
+    },
+    {
+      "type": "Clothing",
+      "product_id": 204,
+      "name": "Sneakers",
+      "size": "10"
+    },
+    {
+      "type": "Electronics",
+      "product_id": 301,
+      "name": "Smartphone",
+      "brand": "BrandX"
+    },
+    {
+      "type": "Electronics",
+      "product_id": 302,
+      "name": "Laptop",
+      "brand": "BrandY"
+    },
+    {
+      "type": "Electronics",
+      "product_id": 303,
+      "name": "Headphones",
+      "brand": "BrandZ"
+    },
+    {
+      "type": "Electronics",
+      "product_id": 304,
+      "name": "Camera",
+      "brand": "BrandW"
+    }
+  ]
+}

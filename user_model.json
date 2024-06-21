@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "type": "User",
+      "user_id": 1,
+      "username": "john_doe",
+      "email": "john.doe@example.com"
+    },
+    {
+      "type": "User",
+      "user_id": 2,
+      "username": "jane_smith",
+      "email": "jane.smith@example.com"
+    },
+    {
+      "type": "User",
+      "user_id": 3,
+      "username": "alice_jones",
+      "email": "alice.jones@example.com"
+    }
+  ],
+  "customers": [
+    {
+      "type": "Customer",
+      "user_id": 4,
+      "username": "bob_brown",
+      "email": "bob.brown@example.com"
+    },
+    {
+      "type": "Customer",
+      "user_id": 5,
+      "username": "sarah_connor",
+      "email": "sarah.connor@example.com"
+    },
+    {
+      "type": "Customer",
+      "user_id": 6,
+      "username": "tom_marshall",
+      "email": "tom.marshall@example.com"
+    }
+  ],
+  "admins": [
+    {
+      "type": "Admin",
+      "user_id": 7,
+      "username": "lisa_ray",
+      "email": "lisa.ray@example.com"
+    },
+    {
+      "type": "Admin",
+      "user_id": 8,
+      "username": "mark_twain",
+      "email": "mark.twain@example.com"
+    },
+    {
+      "type": "Admin",
+      "user_id": 9,
+      "username": "clara_oswald",
+      "email": "clara.oswald@example.com"
+    }
+  ]
+}
