@@ -1,3 +1,5 @@
+
+
 class User:
     """
     A base class for all user types in the system. This class may be abstract if
@@ -27,7 +29,6 @@ class User:
     def user_id(self):
         return self._user_id
     
-
 class Customer(User):
     """
     A class representing a customer in the system. Inherits from User.
