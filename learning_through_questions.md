@@ -418,3 +418,7 @@ Classes in Python are fundamental to the object-oriented programming (OOP) parad
 
 a. what does super do? Why is it important?
 Ans: The `super()` function in Python is used to call a method from a parent class. It returns a temporary object of the superclass that allows you to call its methods. The primary reason for using `super()` is to enable cooperative multiple inheritance in Python. When a class is inherited from multiple parent classes, `super()` helps in calling the correct method of the parent class without explicitly naming the parent class. This ensures that the method resolution order (MRO) is followed correctly, preventing ambiguity and ensuring that the correct method is called based on the inheritance hierarchy.
+
+
+## My Question 9: Should the methods in the database class be the same as the methods in the other classes?
+Ans: The methods in the `Database` class should be tailored to handle data storage, retrieval, and management operations specific to the database functionality. While there might be similarities between the methods in the `Database` class and other classes (e.g., CRUD operations), the implementation details and the scope of these methods can differ significantly. Here are some considerations regarding the methods in the `Database` class compared to other classes:
