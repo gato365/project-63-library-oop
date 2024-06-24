@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append('..')  # Adds the root directory to the system path
 from users import Customer, Admin
 
 class TestCustomer(unittest.TestCase):
