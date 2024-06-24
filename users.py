@@ -13,16 +13,19 @@ class User:
     def login(self):
         """Simulate user login process."""
         print(f"{self.username} logged in.")
+        return True
 
     def logout(self):
         """Simulate user logout process."""
         print(f"{self.username} logged out.")
+        return True
 
     def update_profile(self, **kwargs):
         """Allow a user to update their profile information."""
         for key, value in kwargs.items():
             setattr(self, key, value)
         print("Profile updated successfully.")
+        return True
 
     ## Define User id attribute
     
@@ -38,10 +41,12 @@ class Customer(User):
         print(f"{self.username} is viewing the catalog.")
         for product in catalog:
             print(product)
+        return catalog
 
     def place_order(self, order):
         """Simulate placing an order."""
         print(f"{self.username} placed an order with order id {order}.")
+        return order
 
 class Admin(User):
     """
@@ -56,18 +61,3 @@ class Admin(User):
         """Allow the admin to modify product listings."""
         print(f"{self.username} modified product listing for product id {product_id}. Changes: {changes}")
 
-# Example usage
-if __name__ == "__main__":
-    # Sample users
-    customer = Customer(user_id=1, username="john_doe", email="john@example.com")
-    admin = Admin(user_id=2, username="admin_user", email="admin@example.com")
-
-    # Example operations
-    customer.login()
-    customer.view_catalog(["Product1", "Product2", "Product3"])
-    customer.place_order("Order123")
-
-    admin.login()
-    admin.access_reports()
-    admin.modify_product_listing("Product1", price="19.99", availability="In stock")
-    admin.logout()
