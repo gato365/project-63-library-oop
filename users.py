@@ -53,11 +53,19 @@ class Admin(User):
     A class representing an admin in the system. Inherits from User.
     Admins have additional privileges like accessing reports and modifying product listings.
     """
-    def access_reports(self):
+    def __init__(self, username):
+        super().__init__(username)
+        self.reports_accessed = []  # Track reports accessed by the admin
+        self.product_changes_log = []  # Track changes made to product listings
+
+    def access_reports(self, report_name):
         """Allow the admin to access various system reports."""
-        print(f"{self.username} accessed system reports.")
+        print(f"{self.username} accessed {report_name} report.")
+        self.reports_accessed.append(report_name)
+        return f"Report data for {report_name}"
 
     def modify_product_listing(self, product_id, **changes):
         """Allow the admin to modify product listings."""
         print(f"{self.username} modified product listing for product id {product_id}. Changes: {changes}")
-
+        self.product_changes_log.append({'product_id': product_id, 'changes': changes})
+        return True  # Indicate successful modification

@@ -21,26 +21,25 @@ class TestCustomer(unittest.TestCase):
         order_confirmation = self.customer.place_order("Order123")
         self.assertEqual(order_confirmation, "Order123")
 
-# class TestAdmin(unittest.TestCase):
-#     def setUp(self):
-#         self.admin = Admin(user_id=2, username="admin_user", email="admin@example.com")
+        
+class TestAdminInitialization(unittest.TestCase):
+    def setUp(self):
+        self.admin = Admin(user_id=1, username="adminUser", email="admin@example.com")
 
-#     def test_login(self):
-#         self.assertTrue(self.admin.login())
+    def test_inheritance(self):
+        """Test that Admin correctly inherits from User."""
+        self.assertIsInstance(self.admin, User)
 
-#     def test_access_reports(self):
-#         # Assuming access_reports returns a list of reports
-#         reports = self.admin.access_reports()
-#         self.assertIsInstance(reports, list)
+    def test_initialization(self):
+        """Test that Admin initializes its specific attributes correctly."""
+        self.assertEqual(self.admin.username, "adminUser")
+        self.assertEqual(self.admin.email, "admin@example.com")
+        self.assertEqual(self.admin.reports_accessed, [])
+        self.assertEqual(self.admin.product_changes_log, [])
 
-#     def test_modify_product_listing(self):
-#         # Assuming modify_product_listing returns True on success
-#         result = self.admin.modify_product_listing("Product1", price="19.99", availability="In stock")
-#         self.assertTrue(result)
-
-#     def test_logout(self):
-#         # Assuming logout returns True on success
-#         self.assertTrue(self.admin.logout())
+    def test_user_functionality(self):
+        """Test that Admin retains functionality from User."""
+        self.assertTrue(self.admin.login())
 
 if __name__ == '__main__':
     unittest.main()
